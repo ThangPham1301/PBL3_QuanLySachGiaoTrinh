@@ -1,5 +1,7 @@
+
+
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate to navigate to OTP page
 import axios from 'axios';  // Import axios for API calls
 
 const LoginPage = () => {
@@ -9,13 +11,14 @@ const LoginPage = () => {
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [groupCode, setGroupCode] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate();  // Initialize navigate
 
-  // Handle Login
+  // Handle Login (navigate to OTP page)
   const handleLogin = (e) => {
     e.preventDefault();
     if (email && password) {
-      navigate('/'); // Redirect to HomePage after successful login
+      // After successful login, navigate to OTP page
+      navigate('/otp');  // Navigate to OTP page
     } else {
       alert('Please fill in both fields');
     }
@@ -37,18 +40,7 @@ const LoginPage = () => {
       };
 
       try {
-
-
-
-
-        // Bỏ API vô đây bạn ơi!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        /**
-         * Khai
-         * Khai
-         * Khai
-         */
-
-
+        // API request for registration
         const response = await axios.post('https://your-api-endpoint.com/register', userData);  // Replace with your actual API URL
         
         // Check if the registration was successful

@@ -4,6 +4,7 @@ import HomePage from '../Components/HomePage';
 import LoginPage from '../Components/LoginPage';
 import AboutPage from '../Components/AboutPage';
 import ShopNowPage from '../Components/ShopNowPage';
+import OtpPage from '../Components/OtpPage';
 import './App.css'
 // import './index.css'
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about" element={<AboutPage />} /> 
         <Route path="/shop" element={<ShopNowPage />} /> 
+        <Route path="/otp" element={<OtpPage />} />
       </Routes>
     </Router>
   )
